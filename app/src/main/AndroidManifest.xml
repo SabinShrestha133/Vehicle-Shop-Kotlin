@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,7 +14,155 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BikeShop"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        tools:replace="android:fullBackupContent">
+        <activity
+            android:name=".view.WishlistActivity"
+            android:exported="true"
+            android:label="@string/title_activity_wishlist"
+            android:theme="@style/Theme.BikeShop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.UserOrderActivity"
+            android:exported="true"
+            android:label="@string/title_activity_user_order"
+            android:theme="@style/Theme.BikeShop"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.bikeshop.view.UserDashboardActivity"
+            android:exported="true"
+            android:label="@string/title_activity_user_dashboard"
+            android:theme="@style/Theme.BikeShop"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.bikeshop.view.UpdateProductActivity"
+            android:exported="true"
+            android:label="@string/title_activity_update_product"
+            android:theme="@style/Theme.BikeShop"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.OrderActivity"
+            android:exported="true"
+            android:label="@string/title_activity_order"
+            android:theme="@style/Theme.BikeShop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.EditProfileActivity"
+            android:exported="true"
+            android:label="@string/title_activity_edit_profile"
+            android:theme="@style/Theme.BikeShop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.CartActivity"
+            android:exported="true"
+            android:label="@string/title_activity_cart"
+            android:theme="@style/Theme.BikeShop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.ui.theme.BottomNavigation"
+            android:exported="true"
+            android:label="@string/title_activity_bottom_navigation"
+            android:theme="@style/Theme.BikeShop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.AddressActivity"
+            android:exported="true"
+            android:label="@string/title_activity_address"
+            android:theme="@style/Theme.BikeShop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.AddProductActivity"
+            android:exported="true"
+            android:label="@string/title_activity_add_product"
+            android:theme="@style/Theme.BikeShop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.DashboardActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/Theme.BikeShop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.RegistrationActivity"
+            android:exported="true"
+            android:label="@string/title_activity_register"
+            android:theme="@style/Theme.BikeShop"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.ForgetPasswordActivity"
+            android:exported="true"
+            android:label="@string/title_activity_forget_password"
+            android:theme="@style/Theme.BikeShop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".view.LoginActivity"
             android:exported="true"
@@ -34,17 +185,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".view.MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.BikeShop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
+
 
 </manifest>
